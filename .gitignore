@@ -1,0 +1,45 @@
+# Whitelist: everything in ~/.claude is ignored unless listed below.
+# Sessions, credentials, caches, memory ledgers, and work-specific skills never get committed.
+*
+!.gitignore
+!README.md
+!CLAUDE.md
+!settings.json
+!statusline.sh
+!plugins.json
+
+!scripts/
+!scripts/**
+!agents/
+!agents/**
+!output-styles/
+!output-styles/**
+
+!skills/
+!skills/why/
+!skills/why/**
+!skills/blast-radius/
+!skills/blast-radius/**
+!skills/no-comments/
+!skills/no-comments/**
+!skills/grill-me/
+!skills/grill-me/**
+!skills/lets-cook/
+!skills/lets-cook/**
+!skills/diagnosing-bugs/
+!skills/diagnosing-bugs/**
+!skills/unslop/
+!skills/unslop/**
+!skills/repo-explorer/
+!skills/repo-explorer/**
+!skills/aaron-review/
+!skills/aaron-review/**
+!skills/test-designer/
+!skills/test-designer/**
+!skills/webapp-testing/
+!skills/webapp-testing/**
+skills/webapp-testing/.venv/
+
+# Anything that has to name the employer, its repos, its Jira prefix or its vendors stays
+# local and unbacked-up: hooks/, commands/, mcp-servers.json, and four work-specific skills.
+.DS_Store

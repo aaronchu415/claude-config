@@ -1,0 +1,83 @@
+{
+  "claude-mem@thedotmack": {
+    "version": "10.3.1",
+    "commit": "780cc3894e4d5cd0396ddfe0ccd27410eee9b1b1",
+    "marketplace": "thedotmack",
+    "source": {
+      "source": "github",
+      "repo": "thedotmack/claude-mem"
+    }
+  },
+  "ralph-loop@claude-plugins-official": {
+    "version": "205b6e0b3036",
+    "commit": "aa296ec81e8ccb49c9784f167c2c0aa625a86cec",
+    "marketplace": "claude-plugins-official",
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    }
+  },
+  "compound-engineering@every-marketplace": {
+    "version": "3.21.0",
+    "commit": "4a47a2e0ae06aec412b8b242f3fc4d7ace9bf7da",
+    "marketplace": "every-marketplace",
+    "source": {
+      "source": "git",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin.git"
+    }
+  },
+  "scheduler@claude-scheduler": {
+    "version": "0.2.0",
+    "commit": "f44464eacf7f159407aec0e7fe83a4d6f9d4e026",
+    "marketplace": "claude-scheduler",
+    "source": {
+      "source": "github",
+      "repo": "jshchnz/claude-code-scheduler"
+    }
+  },
+  "chrome-devtools-mcp@chrome-devtools-plugins": {
+    "version": "1.4.0",
+    "commit": "dcb07983c16357b4ac934441fd5b0ab6eea3d573",
+    "marketplace": "chrome-devtools-plugins",
+    "source": {
+      "source": "github",
+      "repo": "ChromeDevTools/chrome-devtools-mcp"
+    }
+  },
+  "caveman@caveman": {
+    "version": "0d95a81d35a9",
+    "commit": "0d95a81d35a9f2d123a5e9430d1cfc43d55f1bb0",
+    "marketplace": "caveman",
+    "source": {
+      "source": "github",
+      "repo": "JuliusBrussee/caveman"
+    }
+  },
+  "slack@claude-plugins-official": {
+    "version": "1.1.0",
+    "commit": "f43f620b0f7a95271ec044e3cfebeef81d2a6ee7",
+    "marketplace": "claude-plugins-official",
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    }
+  },
+  "figma@claude-plugins-official": {
+    "version": "2.2.108",
+    "commit": "a5e7e047692969537e5f44ea12f8f2270078bda3",
+    "marketplace": "claude-plugins-official",
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    }
+  },
+  "mattpocock-skills@mattpocock": {
+    "version": "1.2.3",
+    "commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+    "marketplace": "mattpocock",
+    "source": {
+      "source": "github",
+      "repo": "mattpocock/skills"
+    }
+  }
+}

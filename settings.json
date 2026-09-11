@@ -1,0 +1,138 @@
+{
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "WebFetch",
+      "WebSearch",
+      "mcp__context7__query-docs",
+      "mcp__context7__resolve-library-id",
+      "mcp__figma__get_screenshot",
+      "mcp__figma__get_design_context",
+      "mcp__figma__get_metadata",
+      "mcp__figma__get_variable_defs",
+      "mcp__figma__get_code_connect_map",
+      "mcp__figma__get_code_connect_suggestions",
+      "mcp__figma__get_figjam",
+      "mcp__figma__whoami",
+      "mcp__figma__create_design_system_rules",
+      "Bash(grep:*)",
+      "Bash(agent-browser:*)",
+      "mcp__atlassian__atlassianUserInfo",
+      "mcp__atlassian__getAccessibleAtlassianResources",
+      "mcp__atlassian__getConfluencePage",
+      "mcp__atlassian__searchConfluenceUsingCql",
+      "mcp__atlassian__getConfluenceSpaces",
+      "mcp__atlassian__getPagesInConfluenceSpace",
+      "mcp__atlassian__getConfluencePageFooterComments",
+      "mcp__atlassian__getConfluencePageInlineComments",
+      "mcp__atlassian__getConfluencePageDescendants",
+      "mcp__atlassian__getJiraIssue",
+      "mcp__atlassian__getTransitionsForJiraIssue",
+      "mcp__atlassian__getJiraIssueRemoteIssueLinks",
+      "mcp__atlassian__getVisibleJiraProjects",
+      "mcp__atlassian__getJiraProjectIssueTypesMetadata",
+      "mcp__atlassian__getJiraIssueTypeMetaWithFields",
+      "mcp__atlassian__searchJiraIssuesUsingJql",
+      "mcp__atlassian__lookupJiraAccountId",
+      "mcp__atlassian__search",
+      "mcp__atlassian__fetch"
+    ]
+  },
+  "model": "opus[1m]",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/hooks/git-guard.sh",
+            "timeout": 10,
+            "statusMessage": "git-guard"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "afplay /System/Library/Sounds/Glass.aiff"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "enabledPlugins": {
+    "claude-mem@thedotmack": true,
+    "ralph-loop@claude-plugins-official": true,
+    "compound-engineering@every-marketplace": true,
+    "scheduler@claude-scheduler": true,
+    "chrome-devtools-mcp@chrome-devtools-plugins": true,
+    "caveman@caveman": false,
+    "slack@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "mattpocock-skills@mattpocock": true
+  },
+  "extraKnownMarketplaces": {
+    "chrome-devtools-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "ChromeDevTools/chrome-devtools-mcp"
+      }
+    },
+    "caveman": {
+      "source": {
+        "source": "github",
+        "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "mattpocock": {
+      "source": {
+        "source": "github",
+        "repo": "mattpocock/skills"
+      }
+    }
+  },
+  "skillOverrides": {
+    "mattpocock-skills:ask-matt": "off",
+    "mattpocock-skills:code-review": "off",
+    "mattpocock-skills:codebase-design": "off",
+    "mattpocock-skills:diagnosing-bugs": "off",
+    "mattpocock-skills:grill-me": "off",
+    "mattpocock-skills:grill-with-docs": "off",
+    "mattpocock-skills:handoff": "off",
+    "mattpocock-skills:implement": "off",
+    "mattpocock-skills:improve-codebase-architecture": "off",
+    "mattpocock-skills:resolving-merge-conflicts": "off",
+    "mattpocock-skills:setup-matt-pocock-skills": "off",
+    "mattpocock-skills:tdd": "off",
+    "mattpocock-skills:teach": "off",
+    "mattpocock-skills:to-questionnaire": "off",
+    "mattpocock-skills:to-spec": "off",
+    "mattpocock-skills:to-tickets": "off",
+    "mattpocock-skills:triage": "off",
+    "mattpocock-skills:wait-what": "off",
+    "mattpocock-skills:wizard": "off"
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark",
+  "agentPushNotifEnabled": true
+}
