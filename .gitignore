@@ -36,6 +36,11 @@
 !skills/aaron-review/**
 !skills/test-designer/
 !skills/test-designer/**
+# trd-editor: only these two files. references/ quotes internal docs verbatim and
+# gauge.local.json lists the employer, its vendors and colleagues by name.
+!skills/trd-editor/
+!skills/trd-editor/SKILL.md
+!skills/trd-editor/gauge.py
 !skills/webapp-testing/
 !skills/webapp-testing/**
 skills/webapp-testing/.venv/
