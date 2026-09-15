@@ -96,6 +96,16 @@ Vocabulary: Beck *Implementation Patterns* (symmetry, rate of change), Parnas (i
 
 **Compute values instead of copying them.** If a number can be derived from data already in the code, derive it. Writing it out by hand creates two places to keep in sync, and the second one gets forgotten.
 
+### Invariants
+
+**Establish an invariant at a boundary, once, and let everything past it trust the rule.** A rule like "every order the fulfilment partner knows about has deliveries" is either enforced at one door or re-checked by every consumer forever. The second shape is the tell: a webhook that creates missing deliveries, a page that handles "no deliveries", a reader that asks "what if". Find the door and refuse there. The bouncer cards at the front so the bartenders do not.
+
+**The door is the earliest point where refusing is cheap.** Earliest, because everything downstream gets to trust it. Cheap, because the door has to be allowed to say no. The commerce platform's API extension is the very front of order creation, but a failure there strands a paid customer with no order. The outbound POST to the partner in the queue handler is one step later, and a failure there is a queue retry nobody notices. Pick the second.
+
+**A door refuses, it does not warn.** Log-and-continue at the boundary is no boundary. Throw, let the error propagate up to the highest handler that can do something useful (the queue's redelivery, the request's 500, the UI's retry state), and catch it there. Catching low to keep going is how an invariant quietly stops being one.
+
+**One door, not two.** Once the boundary holds, a downstream fallback that re-establishes the same rule is dead code that hides boundary bugs. Keep it only for data that predates the door, say so where it lives, and name when it can go.
+
 ## React and state
 
 Two Vercel skills carry the React and Next.js rules this file does not repeat. If the repo already vendors them under `.agents/skills/`, read the local copy instead of fetching.

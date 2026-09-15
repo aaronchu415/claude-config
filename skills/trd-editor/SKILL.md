@@ -158,6 +158,8 @@ General prose rules (restraint, no reassurance tails, no summary closers, round 
 
 **The body is the decider's altitude:** Product, an Eng Manager, Leadership, the engineer reading it for the first time. What each piece does, what changes in it, why, what we need from whom, what can go wrong, what it costs. The test for a body sentence is whether the decider can do something with it. A file path, a schema field, a JSON body: no. Give one concrete anchor per claim, in a form the decider can use: an exact partner value, a screenshot, a real-looking order number and tracking number in the walk-through.
 
+**Every invariant names its door.** A guarantee the design leans on ("every order the fulfilment partner knows about has deliveries") is stated once with the single place that enforces it, what happens there on failure, and why that place and not an earlier one. A guarantee with no named door, or two, is a gap for the reviewer to raise. The reasoning is in `aaron-review`, under Invariants.
+
 **The appendix is the builder's altitude.** Every `path:line`, the schema, the retry ladder with timings, the handshake, the request and response bodies for each beat, the config payload per environment, the platform reference verified against a pinned SDK version, the Gherkin scenarios. Mechanism plus reason, with a worked example beside each schema. Numbered `A.1…` and cross-referenced from the body by that number. It carries the same facts the body tells in words, and a builder can read it without the body.
 
 **When the reader is the builder** (an engineers-only doc: an ingestion pipeline, a rendering architecture), the appendix collapses into the body and identifier density runs high. Still name by function first and give the identifier second.
