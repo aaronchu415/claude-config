@@ -1,0 +1,7 @@
+{
+  "name": "aaron-mods",
+  "owner": { "name": "Aaron Chu" },
+  "plugins": [
+    { "name": "next-steps", "source": "./next-steps", "description": "After each turn, 2 or 3 likely next prompts above the prompt, routed by lets-cook and tuned by what you actually send." }
+  ]
+}

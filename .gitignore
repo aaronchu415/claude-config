@@ -28,6 +28,8 @@
 !skills/lets-cook/**
 !skills/diagnosing-bugs/
 !skills/diagnosing-bugs/**
+!skills/pr/
+!skills/pr/**
 !skills/unslop/
 !skills/unslop/**
 !skills/repo-explorer/
@@ -48,3 +50,10 @@ skills/webapp-testing/.venv/
 # Anything that has to name the employer, its repos, its Jira prefix or its vendors stays
 # local and unbacked-up: hooks/, commands/, mcp-servers.json, and four work-specific skills.
 .DS_Store
+
+!skills/pr-walkthrough/
+!skills/pr-walkthrough/SKILL.md
+
+!mods/
+!mods/**
+mods/*/.claude-plugin/types/

@@ -1,7 +1,7 @@
 {
   "claude-mem@thedotmack": {
-    "version": "10.3.1",
-    "commit": "780cc3894e4d5cd0396ddfe0ccd27410eee9b1b1",
+    "version": "13.25.3",
+    "commit": "4520de9e0f8d6cdc20597520e383d8b51d93137f",
     "marketplace": "thedotmack",
     "source": {
       "source": "github",
@@ -72,12 +72,21 @@
     }
   },
   "mattpocock-skills@mattpocock": {
-    "version": "1.2.3",
-    "commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+    "version": "1.3.1",
+    "commit": "6fd947921b935b7e1e69293a200400f0fdd5c15f",
     "marketplace": "mattpocock",
     "source": {
       "source": "github",
       "repo": "mattpocock/skills"
+    }
+  },
+  "next-steps@aaron-mods": {
+    "version": "0.2.0",
+    "commit": null,
+    "marketplace": "aaron-mods",
+    "source": {
+      "source": "directory",
+      "path": "/Users/CHUAX4/.claude/mods"
     }
   }
 }

@@ -23,6 +23,7 @@
 
 - **Swarm.** A task touching more than 5 independent files fans out to parallel sub-agents, 5 to 8 files each.
 - **Thin results.** A search or command returning suspiciously few results is re-run narrower (single directory, stricter glob), and you say when you suspect truncation.
+- **Bugs against latest.** Before reporting a bug, `git fetch origin main` and confirm it still exists on `origin/main`, then check the author's open PRs (`gh pr list --author <author> --state open`) for a fix already in flight. Fixed elsewhere: point to it, don't report it.
 - **Renames are grep, not AST.** When changing a function, type, or variable, search separately for: direct references; type-level references (interfaces, generics); string literals; dynamic imports and `require()`; re-exports and barrel entries; tests and mocks. Done means every list is checked.
 
 ## Shipping

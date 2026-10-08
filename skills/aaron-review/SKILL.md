@@ -29,6 +29,7 @@ Two rules outrank everything below.
 | Writing or judging tests | [Tests](#tests) |
 | "This function feels hard to follow" | [Measure, do not argue](#measure-do-not-argue) |
 | Touching code that talks to an external system | [Integration code](#integration-code) |
+| Scoping a review of any branch | [Review scope](#review-scope) |
 | Leaving feedback on someone else's diff | [Review-comment voice](#review-comment-voice) |
 | Finishing a pass | [Verification](#verification) |
 
@@ -176,6 +177,12 @@ Before calling a module that talks to an external system ship-worthy:
 **Scope the verdict.** "Solid" off a code-read covers logic, tests and style. Say what was not verified: external contracts, failure modes.
 
 **Every mutating step in a timer, queue handler or ingestion loop answers two questions:** what if this runs twice, and what if the last run died halfway? A multi-region deploy runs every timer once per region and queues redeliver, so the code has to land on the same end state either way (a dedupe key, a ledger check, an upsert) rather than assuming a clean start. If the answer is "depends what state was left behind", a reconciliation step is missing.
+
+## Review scope
+
+**The base is `origin/main`, fetched first.** Run `git fetch origin main`, then diff `origin/main...HEAD`. Local `main` is never updated, so diffing against it drags already-merged work into the review. Hand reviewer subagents that file list, not "the branch".
+
+**Check the author's other open PRs before flagging.** `gh pr list --author <author> --state open --json number,title,files`. A finding a sibling PR already fixes becomes a one-line pointer to that PR, not a finding.
 
 ## Review-comment voice
 

@@ -1,0 +1,10 @@
+{
+  "name": "next-steps",
+  "version": "0.2.0",
+  "description": "After each turn, 2 or 3 likely next prompts above the prompt, from the session's own model with lets-cook's routes and your past picks. Press 1, 2 or 3 in an empty prompt to draft one, 0 to dismiss. Idle where nothing draws. Forked from hamzafer/claude-code-mods.",
+  "author": {
+    "name": "Hamza Zafar",
+    "url": "https://github.com/hamzafer"
+  },
+  "types": "./types/index.d.ts"
+}
